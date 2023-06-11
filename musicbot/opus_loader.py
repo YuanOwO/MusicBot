@@ -1,7 +1,7 @@
-from discord import opus
+from nextcord import opus
 
 
-def load_opus_lib():
+def load_opus_lib() -> None:
     if opus.is_loaded():
         return
 
@@ -11,4 +11,4 @@ def load_opus_lib():
     except OSError:
         pass
 
-    raise RuntimeError("Could not load an opus lib.")
+    raise RuntimeError('Could not load an opus lib.')
